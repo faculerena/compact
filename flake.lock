@@ -797,17 +797,17 @@
         "utils": "utils_5"
       },
       "locked": {
-        "lastModified": 1794331902,
-        "narHash": "sha256-nLXEO6fy7VDHR+au5gFCJ4SZe6RyJD4C88GoqaXNACg=",
-        "owner": "midnightntwrk",
+        "lastModified": 1795202441,
+        "narHash": "sha256-Mr1yvb+P5f9dgElYns+UBnf4HK3owCMFRt7Z7/p3HfQ=",
+        "owner": "faculerena",
         "repo": "midnight-zkir",
-        "rev": "7a51b3385bbf4bce3604df87a7c70867c9ab43c0",
+        "rev": "0be067e62c9d898971178b212548ae9b77704882",
         "type": "github"
       },
       "original": {
-        "owner": "midnightntwrk",
-        "ref": "zkir-3.2.1",
+        "owner": "faculerena",
         "repo": "midnight-zkir",
+        "rev": "0be067e62c9d898971178b212548ae9b77704882",
         "type": "github"
       }
     },

@@ -37,8 +37,10 @@
       url = "github:midnightntwrk/midnight-ledger/ledger-9.1.0.0-rc.3";
     };
     zkir-v3 = {
-      # zkir-v3 key-generation binary for v3 IR format
-      url = "github:midnightntwrk/midnight-zkir/zkir-3.2.1"; # zkir-v3
+      # zkir-v3 key-generation binary for v3 IR format.
+      # compactf: tag zkir-3.2.1 plus fast key generation (same key bytes as stock),
+      # branch compactf of faculerena/midnight-zkir, pinned by revision.
+      url = "github:faculerena/midnight-zkir/0be067e62c9d898971178b212548ae9b77704882"; # zkir-v3
       inputs.nixpkgs.follows = "nixpkgs-zkir";
       inputs.fenix.follows = "fenix-zkir";
     };
@@ -366,6 +368,8 @@
               #!/usr/bin/env bash
               thisdir="\$(cd \$(dirname \$0) ; pwd -P)"
               PATH="\$thisdir:\$PATH"
+              # compactf: the fast zkir-v3 needs about a quarter of stock's memory per job
+              export COMPACT_ZK_JOB_MB="\''${COMPACT_ZK_JOB_MB:-1536}"
               exec "\$thisdir/compactc.bin" "\$@"
               EOF
 
