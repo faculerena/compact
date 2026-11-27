@@ -67,7 +67,7 @@ case "$(uname -s)/$(uname -m)" in
 esac
 
 if command -v curl > /dev/null; then
-  fetch() { curl --proto '=https' --tlsv1.2 -fSL --retry 3 -o "$2" "$1"; }
+  fetch() { curl --proto '=https' --tlsv1.2 -fsSL --retry 3 -o "$2" "$1"; }
 elif command -v wget > /dev/null; then
   fetch() { wget -q -O "$2" "$1"; }
 else
