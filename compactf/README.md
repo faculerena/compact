@@ -32,9 +32,10 @@ compactf update [VERSION]
 compactf uninstall
 ```
 
-Key generation runs one `zkir-v3` per circuit in parallel. Set the number of jobs
-with `--zk-jobs N` or `COMPACT_ZK_JOBS`. `COMPACT_ZK_JOB_MB` (default 1536) is the
-memory budgeted per job when the default number of jobs is chosen.
+Key generation runs one zkir process per circuit in parallel. Set the number of jobs
+with `--zk-jobs N` or `COMPACT_ZK_JOBS`. `COMPACT_ZK_JOB_MB` is the memory budgeted
+per job when the default number of jobs is chosen. It defaults to 1536 in 0.36.1,
+whose fast zkir-v3 needs less memory, and to 5120 in 0.35.0, which uses stock zkir.
 
 ## Releases
 
