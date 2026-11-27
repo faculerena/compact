@@ -4,7 +4,7 @@ It is stock compactc @VERSION@ plus the compactf changes (commit `@COMMIT@`). It
 
 - Witness-disclosure analysis runs in two stages: a quick pass that stops at the first leak, and the full pass only to report one.
 - Proving keys are generated in parallel, one `zkir-v3` process per circuit (`--zk-jobs N` or `COMPACT_ZK_JOBS`; by default it follows processors and memory).
-- `zkir-v3` is midnight-zkir 3.2.1 with faster key generation ([faculerena/midnight-zkir@0be067e](https://github.com/faculerena/midnight-zkir/tree/compactf)). It writes the same key bytes as stock.
+- `zkir-v3` is midnight-zkir 3.2.1 with faster key generation and, on Linux, mimalloc ([faculerena/midnight-zkir@d636caa](https://github.com/faculerena/midnight-zkir/tree/compactf)). It writes the same key bytes as stock.
 - Large manifests are hashed in parallel.
 
 ## Install

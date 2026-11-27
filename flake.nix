@@ -38,9 +38,9 @@
     };
     zkir-v3 = {
       # zkir-v3 key-generation binary for v3 IR format.
-      # compactf: tag zkir-3.2.1 plus fast key generation (same key bytes as stock),
+      # compactf: tag zkir-3.2.1 plus fast key generation and mimalloc on musl (same key bytes as stock),
       # branch compactf of faculerena/midnight-zkir, pinned by revision.
-      url = "github:faculerena/midnight-zkir/0be067e62c9d898971178b212548ae9b77704882"; # zkir-v3
+      url = "github:faculerena/midnight-zkir/d636caa57fad756e89fe1f69ec209a43e9bd8ede"; # zkir-v3
       inputs.nixpkgs.follows = "nixpkgs-zkir";
       inputs.fenix.follows = "fenix-zkir";
     };
